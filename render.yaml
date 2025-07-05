@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: n8n-free
+    name: n8n
     env: docker
     region: oregon # optional (defaults to oregon)
     plan: free # optional (defaults to starter)
@@ -12,23 +12,23 @@ services:
         value: postgresdb
       - key: DB_POSTGRESDB_HOST
         fromDatabase:
-          name: n8n-free
+          name: n8n
           property: host
       - key: DB_POSTGRESDB_DATABASE
         fromDatabase:
-          name: n8n-free
+          name: n8n
           property: database
       - key: DB_POSTGRESDB_PORT
         fromDatabase:
-          name: n8n-free
+          name: n8n
           property: port
       - key: DB_POSTGRESDB_USER
         fromDatabase:
-          name: n8n-free
+          name: n8n
           property: user
       - key: DB_POSTGRESDB_PASSWORD
         fromDatabase:
-          name: n8n-free
+          name: n8n
           property: password
       - key: DB_POSTGRESDB_SCHEMA
         value: public
